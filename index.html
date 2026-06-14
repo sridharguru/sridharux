@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sridhar Gururajan — Senior Product Designer</title>
+<meta name="description" content="Sridhar Gururajan — Senior Product Designer. Designing the future of digital experiences through UX and AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#351f39;
+    --text:#dadada;
+    --shadow:6px 4px 18px 0px #726a95;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inria Sans',system-ui,sans-serif;
+    min-height:100vh;
+    padding:32px;
+  }
+  .wrap{max-width:1440px;margin:0 auto}
+
+  /* Grid: 2 columns matching Figma proportions (559 / 793) */
+  .grid{
+    display:grid;
+    grid-template-columns:559fr 793fr;
+    gap:24px;
+    align-items:start;
+  }
+  .full{grid-column:1 / -1}
+
+  /* Cards */
+  .card{
+    position:relative;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    display:block;
+    text-decoration:none;
+    color:var(--text);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  a.card:hover{transform:translateY(-4px);box-shadow:8px 8px 26px 0px #726a95}
+  .card .bg{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;z-index:0}
+  .card .scrim{position:absolute;inset:0;z-index:1}
+  .card .content{position:relative;z-index:2;padding:40px}
+
+  /* Intro card */
+  .intro{
+    background:linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),#719fb0;
+    min-height:450px;
+  }
+  .intro .content{display:flex;flex-direction:column;gap:30px;padding:27px 80px}
+  .star{width:112px;height:112px;transform:scaleY(-1)}
+  .intro h1{font-weight:400;font-size:32px;line-height:1.15;max-width:409px}
+  .intro h1 strong{font-weight:700}
+  .intro .sub{font-size:22px}
+  .phone{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.2);
+    color:rgba(255,255,255,.75);
+    padding:8px 16px;border-radius:20px;font-size:20px;
+    text-decoration:none;width:max-content;
+    transition:background .2s ease;
+  }
+  .phone:hover{background:rgba(255,255,255,.32)}
+
+  /* Project cards */
+  .proj{min-height:246px}
+  .proj.tall{min-height:450px}
+  .proj.wide{min-height:172px}
+  .eyebrow{font-size:18px;margin-bottom:6px}
+  .title{font-weight:700;font-size:30px;line-height:1.1;margin-bottom:14px}
+  .desc{font-weight:300;font-size:20px;line-height:1.3;max-width:560px}
+  .desc.reg{font-weight:400}
+
+  /* Tags */
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .tag{
+    display:inline-flex;align-items:center;gap:5px;
+    padding:9px 18px;font-size:16px;color:var(--text);
+  }
+  .tag::before{content:"";width:2px;height:16px;background:currentColor;display:block}
+
+  /* AI pill on the spiritual card eyebrow */
+  .ai-pill{
+    display:inline-block;background:#c5c682;color:#693232;
+    font-size:14px;border-radius:10px;padding:1px 9px;margin-left:8px;
+    vertical-align:middle;
+  }
+
+  /* In-progress badge */
+  .progress-pill{
+    display:inline-flex;align-items:center;gap:6px;
+    background:rgba(255,200,90,.18);color:#f0c674;
+    font-size:13px;border-radius:20px;padding:3px 11px;margin-left:8px;
+    vertical-align:middle;letter-spacing:.02em;
+  }
+  .progress-pill::before{
+    content:"";width:7px;height:7px;border-radius:50%;
+    background:#f0c674;display:inline-block;
+    animation:pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  /* Responsive */
+  @media (max-width:900px){
+    body{padding:18px}
+    .grid{grid-template-columns:1fr;gap:18px}
+    .intro,.proj,.proj.tall,.proj.wide{min-height:auto}
+    .intro .content{padding:32px}
+    .card .content{padding:28px}
+    .intro h1{font-size:26px}
+    .title{font-size:24px}
+    .desc,.intro .sub{font-size:18px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main class="grid">
+
+    <!-- Intro -->
+    <section class="card intro" aria-label="Introduction">
+      <div class="content">
+        <img class="star" src="assets/star1.svg" alt="" aria-hidden="true">
+        <h1>I'm <strong>Sridhar Gururajan</strong>, Designing the future of digital experiences through UX and AI</h1>
+        <p class="sub">Creating user-centric designs for 9+ years!</p>
+        <a class="phone" href="tel:+918870308265">+91 8870 30 8265</a>
+      </div>
+    </section>
+
+    <!-- Sensitivity Data Classification (tall, top-right) -->
+    <a class="card proj tall" href="https://www.figma.com/deck/ZM7DmA233FhYcwuvyGR08C" target="_blank" rel="noopener">
+      <div class="bg" style="background:#a0c1b8"></div>
+      <img class="bg" src="assets/component1.jpg" alt="">
+      <div class="scrim" style="background:rgba(0,0,0,.9)"></div>
+      <div class="content">
+        <p class="eyebrow">UX Study</p>
+        <h2 class="title">Sensitivity Data Classification</h2>
+        <p class="desc reg">Helping users tag their files to reduce functional costs and loss of revenue due to regulation fees.</p>
+        <div class="tags">
+          <span class="tag">UX Research</span>
+          <span class="tag">Strategy</span>
+          <span class="tag">UI Design</span>
+          <span class="tag">Usability Testing</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Chemical Regulatory (left) -->
+    <a class="card proj" href="https://www.figma.com/deck/1Ka6B10cOYrrqVpSLOYZiZ/Chemical-Regulatory?node-id=1-42" target="_blank" rel="noopener">
+      <div class="bg" style="background:#726a95"></div>
+      <img class="bg" src="assets/frame8.jpg" alt="">
+      <div class="scrim" style="background:rgba(0,0,0,.9)"></div>
+      <div class="content">
+        <p class="eyebrow">UX Research Study</p>
+        <h2 class="title">Chemical Regulatory</h2>
+        <p class="desc reg">A product for chemical sustainability.</p>
+        <div class="tags">
+          <span class="tag">Strategy</span>
+          <span class="tag">UX Research</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- IoT Devices (right) -->
+    <div class="card proj">
+      <div class="bg" style="background:#4d81cf"></div>
+      <img class="bg" src="assets/frame14.jpg" alt="">
+      <div class="scrim" style="background:rgba(0,0,0,.8)"></div>
+      <div class="content">
+        <p class="eyebrow">Usability Study <span class="progress-pill">In Progress</span></p>
+        <h2 class="title">IoT Devices for Sustainability</h2>
+        <p class="desc">Alarm and Monitor system for procured spare parts.</p>
+        <div class="tags">
+          <span class="tag">UX Research</span>
+          <span class="tag">UI Design</span>
+          <span class="tag">Usability Testing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spiritual Habit app (full width bottom) -->
+    <a class="card proj wide full" href="http://templeint.in/" target="_blank" rel="noopener">
+      <div class="bg" style="background:#719fb0"></div>
+      <img class="bg" src="assets/frame7.jpg" alt="">
+      <div class="scrim" style="background:rgba(0,0,0,.7)"></div>
+      <div class="content">
+        <p class="eyebrow">Personal Case Study <span class="ai-pill">AI</span></p>
+        <h2 class="title">Application for Spiritual Habit Formation</h2>
+        <div class="tags">
+          <span class="tag">Business and Strategy</span>
+        </div>
+      </div>
+    </a>
+
+  </main>
+</div>
+</body>
+</html>
