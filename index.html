@@ -3,205 +3,261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sridhar Gururajan — Senior Product Designer</title>
-<meta name="description" content="Sridhar Gururajan — Senior Product Designer. Designing the future of digital experiences through UX and AI.">
+<title>Sridhar Gururajan — Senior UX Designer</title>
+<meta name="description" content="Sridhar Gururajan — Senior Product Designer working at the intersection of UX and AI. 9+ years across aerospace, pharma, and enterprise.">
+<meta property="og:title" content="Sridhar Gururajan — Product Designer">
+<meta property="og:description" content="Designing the future of digital experiences through UX and AI.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#351f39;
-    --text:#dadada;
-    --shadow:6px 4px 18px 0px #726a95;
-    --radius:10px;
+    --paper:#f4f1ea;
+    --ink:#1a1715;
+    --muted:#6b655d;
+    --line:#ddd7cb;
+    --tile:#fbfaf6;
+    --accent:#b33000;
+    --r:18px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inria Sans',system-ui,sans-serif;
-    min-height:100vh;
-    padding:32px;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.5;
+    padding:clamp(20px,5vw,64px);
   }
-  .wrap{max-width:1440px;margin:0 auto}
+  .wrap{max-width:1180px;margin:0 auto}
 
-  /* Grid: 2 columns matching Figma proportions (559 / 793) */
-  .grid{
+  /* Masthead */
+  header{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:24px;flex-wrap:wrap;
+    padding-bottom:28px;margin-bottom:28px;
+    border-bottom:1px solid var(--line);
+  }
+  .name{
+    font-family:'Fraunces',serif;
+    font-weight:500;font-size:clamp(28px,4vw,40px);
+    letter-spacing:-.01em;line-height:1;
+  }
+  .role{
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-top:10px;
+  }
+  .contact{display:flex;gap:22px;font-size:14px;align-items:center}
+  .contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .2s}
+  .contact a:hover{border-color:var(--accent)}
+
+  /* Statement */
+  .statement{
+    font-family:'Fraunces',serif;
+    font-weight:400;font-size:clamp(22px,3.4vw,34px);
+    line-height:1.28;letter-spacing:-.01em;
+    max-width:22ch;margin:8px 0 44px;
+  }
+  .statement em{font-style:italic;color:var(--accent)}
+
+  /* Section label */
+  .eyebrow-sec{
+    display:flex;align-items:center;gap:14px;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:18px;
+  }
+  .eyebrow-sec::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* Bento grid */
+  .bento{
     display:grid;
-    grid-template-columns:559fr 793fr;
-    gap:24px;
-    align-items:start;
+    grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:minmax(168px,auto);
+    gap:16px;
   }
-  .full{grid-column:1 / -1}
+  .tile{
+    grid-column:span 3;
+    background:var(--tile);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:26px;
+    display:flex;flex-direction:column;
+    text-decoration:none;color:inherit;
+    position:relative;overflow:hidden;isolation:isolate;
+    min-height:200px;
+    transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  /* background image layer */
+  .tile .bgimg{
+    position:absolute;inset:0;z-index:-2;
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(.9);transition:transform .6s ease;
+  }
+  /* light wash so dark ink text stays readable */
+  .tile .wash{
+    position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(251,250,246,.94) 0%,rgba(251,250,246,.78) 46%,rgba(251,250,246,.5) 100%);
+  }
+  a.tile:hover{
+    border-color:var(--accent);
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px -18px rgba(26,23,21,.45);
+  }
+  a.tile:hover .bgimg{transform:scale(1.05)}
+  /* spans */
+  .tile.feature{grid-column:span 3;grid-row:span 2}
+  .tile.wide{grid-column:span 6}
 
-  /* Cards */
-  .card{
-    position:relative;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    overflow:hidden;
-    display:block;
-    text-decoration:none;
-    color:var(--text);
-    transition:transform .25s ease, box-shadow .25s ease;
+  .tile .kicker{
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);display:flex;align-items:center;gap:10px;
   }
-  a.card:hover{transform:translateY(-4px);box-shadow:8px 8px 26px 0px #726a95}
-  .card .bg{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;z-index:0}
-  .card .scrim{position:absolute;inset:0;z-index:1}
-  .card .content{position:relative;z-index:2;padding:40px}
-
-  /* Intro card */
-  .intro{
-    background:linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),#719fb0;
-    min-height:450px;
+  .tile h3{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:clamp(20px,2.4vw,26px);line-height:1.12;
+    letter-spacing:-.01em;margin:12px 0 8px;
   }
-  .intro .content{display:flex;flex-direction:column;gap:30px;padding:27px 80px}
-  .star{width:112px;height:112px;transform:scaleY(-1)}
-  .intro h1{font-weight:400;font-size:32px;line-height:1.15;max-width:409px}
-  .intro h1 strong{font-weight:700}
-  .intro .sub{font-size:22px}
-  .phone{
-    display:inline-flex;align-items:center;justify-content:center;
-    background:rgba(255,255,255,.2);
-    color:rgba(255,255,255,.75);
-    padding:8px 16px;border-radius:20px;font-size:20px;
-    text-decoration:none;width:max-content;
-    transition:background .2s ease;
+  .tile p{font-size:14.5px;color:var(--muted);max-width:46ch}
+  .tile .meta{
+    margin-top:auto;padding-top:18px;
+    display:flex;flex-wrap:wrap;gap:8px 7px;align-items:center;
   }
-  .phone:hover{background:rgba(255,255,255,.32)}
-
-  /* Project cards */
-  .proj{min-height:246px}
-  .proj.tall{min-height:450px}
-  .proj.wide{min-height:172px}
-  .eyebrow{font-size:18px;margin-bottom:6px}
-  .title{font-weight:700;font-size:30px;line-height:1.1;margin-bottom:14px}
-  .desc{font-weight:300;font-size:20px;line-height:1.3;max-width:560px}
-  .desc.reg{font-weight:400}
-
-  /* Tags */
-  .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-  .tag{
-    display:inline-flex;align-items:center;gap:5px;
-    padding:9px 18px;font-size:16px;color:var(--text);
+  .chip{
+    font-size:12px;color:var(--muted);
+    border:1px solid var(--line);border-radius:100px;
+    padding:4px 11px;background:rgba(244,241,234,.7);backdrop-filter:blur(2px);
+    transition:border-color .25s, color .25s;
   }
-  .tag::before{content:"";width:2px;height:16px;background:currentColor;display:block}
+  a.tile:hover .chip{border-color:#cfc7b6}
 
-  /* AI pill on the spiritual card eyebrow */
-  .ai-pill{
-    display:inline-block;background:#c5c682;color:#693232;
-    font-size:14px;border-radius:10px;padding:1px 9px;margin-left:8px;
-    vertical-align:middle;
+  /* status badges */
+  .badge{
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 9px;border-radius:100px;font-weight:500;
+  }
+  .badge.live{background:rgba(179,48,0,.1);color:var(--accent)}
+  .badge.wip{
+    background:transparent;color:var(--muted);
+    border:1px solid var(--line);display:inline-flex;align-items:center;gap:6px;
+  }
+  .badge.wip::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--accent);animation:pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:.9}50%{opacity:.25}}
+
+  /* index numbers */
+  .idx{
+    position:absolute;top:24px;right:26px;
+    font-family:'Fraunces',serif;font-size:14px;color:var(--line);
+    font-variant-numeric:tabular-nums;
   }
 
-  /* In-progress badge */
-  .progress-pill{
-    display:inline-flex;align-items:center;gap:6px;
-    background:rgba(255,200,90,.18);color:#f0c674;
-    font-size:13px;border-radius:20px;padding:3px 11px;margin-left:8px;
-    vertical-align:middle;letter-spacing:.02em;
+  footer{
+    margin-top:48px;padding-top:24px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;
+    font-size:13px;color:var(--muted);
   }
-  .progress-pill::before{
-    content:"";width:7px;height:7px;border-radius:50%;
-    background:#f0c674;display:inline-block;
-    animation:pulse 1.6s ease-in-out infinite;
-  }
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+  footer a:hover{border-color:var(--accent)}
 
-  /* Responsive */
-  @media (max-width:900px){
-    body{padding:18px}
-    .grid{grid-template-columns:1fr;gap:18px}
-    .intro,.proj,.proj.tall,.proj.wide{min-height:auto}
-    .intro .content{padding:32px}
-    .card .content{padding:28px}
-    .intro h1{font-size:26px}
-    .title{font-size:24px}
-    .desc,.intro .sub{font-size:18px}
+  @media (max-width:820px){
+    .bento{grid-template-columns:repeat(2,1fr)}
+    .tile,.tile.feature,.tile.wide{grid-column:span 2;grid-row:auto}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <main class="grid">
 
-    <!-- Intro -->
-    <section class="card intro" aria-label="Introduction">
-      <div class="content">
-        <img class="star" src="star1.svg" alt="" aria-hidden="true">
-        <h1>I'm <strong>Sridhar Gururajan</strong>, Designing the future of digital experiences through UX and AI</h1>
-        <p class="sub">Creating user-centric designs for 9+ years!</p>
-        <a class="phone" href="tel:+918870308265">+91 8870 30 8265</a>
-      </div>
-    </section>
+  <header>
+    <div>
+      <div class="name">Sridhar Gururajan</div>
+      <div class="role">Senior Designer · UX × AI× UI</div>
+    </div>
+    <nav class="contact">
+      <a href="tel:+918870308265">+91 8870 30 8265</a>
+      <a href="mailto:srisridharguru@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/sridhar-gururajan/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </header>
 
-    <!-- Sensitivity Data Classification (tall, top-right) -->
-    <a class="card proj tall" href="https://www.figma.com/deck/ZM7DmA233FhYcwuvyGR08C" target="_blank" rel="noopener">
-      <div class="bg" style="background:#a0c1b8"></div>
-      <img class="bg" src="component1.jpg" alt="">
-      <div class="scrim" style="background:rgba(0,0,0,.9)"></div>
-      <div class="content">
-        <p class="eyebrow">UX Study</p>
-        <h2 class="title">Sensitivity Data Classification</h2>
-        <p class="desc reg">Helping users tag their files to reduce functional costs and loss of revenue due to regulation fees.</p>
-        <div class="tags">
-          <span class="tag">UX Research</span>
-          <span class="tag">Strategy</span>
-          <span class="tag">UI Design</span>
-          <span class="tag">Usability Testing</span>
-        </div>
-      </div>
-    </a>
+  <p class="statement">Designing the future of digital experiences through <em>UX and AI</em> — 9+ years across aerospace, pharma, and enterprise.</p>
 
-    <!-- Chemical Regulatory (left) -->
-    <a class="card proj" href="https://www.figma.com/deck/1Ka6B10cOYrrqVpSLOYZiZ/Chemical-Regulatory?node-id=1-42" target="_blank" rel="noopener">
-      <div class="bg" style="background:#726a95"></div>
-      <img class="bg" src="frame8.jpg" alt="">
-      <div class="scrim" style="background:rgba(0,0,0,.9)"></div>
-      <div class="content">
-        <p class="eyebrow">UX Research Study</p>
-        <h2 class="title">Chemical Regulatory</h2>
-        <p class="desc reg">A product for chemical sustainability.</p>
-        <div class="tags">
-          <span class="tag">Strategy</span>
-          <span class="tag">UX Research</span>
-        </div>
+  <div class="eyebrow-sec">Selected Work</div>
+
+  <main class="bento">
+
+    <!-- Feature: Sriyam (was Spiritual Habit) -->
+    <a class="tile feature" href="http://templeint.in/" target="_blank" rel="noopener">
+      <img class="bgimg" src="frame7.jpg" alt="">
+      <div class="wash"></div>
+      <span class="idx">01</span>
+      <div class="kicker">Personal Case Study <span class="badge live">Live</span></div>
+      <h3>Sriyam</h3>
+      <p>A devotional travel platform connecting temple heritage with everyday emotional needs — powered by AI.</p>
+      <div class="meta">
+        <span class="chip">Business &amp; Strategy</span>
+        <span class="chip">Product Design</span>
+        <span class="chip">AI</span>
       </div>
     </a>
 
-    <!-- IoT Devices (right) -->
-    <div class="card proj">
-      <div class="bg" style="background:#4d81cf"></div>
-      <img class="bg" src="frame14.jpg" alt="">
-      <div class="scrim" style="background:rgba(0,0,0,.8)"></div>
-      <div class="content">
-        <p class="eyebrow">Usability Study <span class="progress-pill">In Progress</span></p>
-        <h2 class="title">IoT Devices for Sustainability</h2>
-        <p class="desc">Alarm and Monitor system for procured spare parts.</p>
-        <div class="tags">
-          <span class="tag">UX Research</span>
-          <span class="tag">UI Design</span>
-          <span class="tag">Usability Testing</span>
-        </div>
+    <!-- Sensitivity Data -->
+    <a class="tile" href="https://www.figma.com/deck/ZM7DmA233FhYcwuvyGR08C" target="_blank" rel="noopener">
+      <img class="bgimg" src="component1.jpg" alt="">
+      <div class="wash"></div>
+      <span class="idx">02</span>
+      <div class="kicker">UX Study</div>
+      <h3>Sensitivity Data Classification</h3>
+      <p>Helping users tag their files to reduce functional costs and revenue loss from regulation fees.</p>
+      <div class="meta">
+        <span class="chip">UX Research</span>
+        <span class="chip">Strategy</span>
+        <span class="chip">UI Design</span>
+      </div>
+    </a>
+
+    <!-- Chemical Regulatory -->
+    <a class="tile" href="https://www.figma.com/deck/1Ka6B10cOYrrqVpSLOYZiZ/Chemical-Regulatory?node-id=1-42" target="_blank" rel="noopener">
+      <img class="bgimg" src="frame8.jpg" alt="">
+      <div class="wash"></div>
+      <span class="idx">03</span>
+      <div class="kicker">UX Research Study</div>
+      <h3>Chemical Regulatory</h3>
+      <p>A product for chemical sustainability at Airbus.</p>
+      <div class="meta">
+        <span class="chip">Strategy</span>
+        <span class="chip">UX Research</span>
+      </div>
+    </a>
+
+    <!-- IoT Devices (In Progress), wide -->
+    <div class="tile wide">
+      <img class="bgimg" src="frame14.jpg" alt="">
+      <div class="wash"></div>
+      <span class="idx">04</span>
+      <div class="kicker">Usability Study <span class="badge wip">In Progress</span></div>
+      <h3>IoT Devices for Sustainability</h3>
+      <p>Alarm and monitoring system for procured spare parts.</p>
+      <div class="meta">
+        <span class="chip">UX Research</span>
+        <span class="chip">UI Design</span>
+        <span class="chip">Usability Testing</span>
       </div>
     </div>
 
-    <!-- Spiritual Habit app (full width bottom) -->
-    <a class="card proj wide full" href="http://templeint.in/" target="_blank" rel="noopener">
-      <div class="bg" style="background:#719fb0"></div>
-      <img class="bg" src="frame7.jpg" alt="">
-      <div class="scrim" style="background:rgba(0,0,0,.7)"></div>
-      <div class="content">
-        <p class="eyebrow">Personal Case Study <span class="ai-pill">AI</span></p>
-        <h2 class="title">Application for Spiritual Habit Formation</h2>
-        <div class="tags">
-          <span class="tag">Business and Strategy</span>
-        </div>
-      </div>
-    </a>
-
   </main>
+
+  <footer>
+    <span>© 2026 Sridhar Gururajan · Bangalore</span>
+    <span><a href="mailto:srisridharguru@gmail.com">srisridharguru@gmail.com</a></span>
+  </footer>
+
 </div>
 </body>
 </html>
