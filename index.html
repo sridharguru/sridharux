@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sridhar Gururajan · Product Designer</title>
-<meta name="description" content="Sridhar Gururajan, product designer from Dharmapuri, Tamil Nadu. 9.5 years at Airbus, Eli Lilly and L&amp;T. Founder of Sriyam. Open to remote design roles and consulting.">
-<meta property="og:title" content="Sridhar Gururajan · Product Designer">
-<meta property="og:description" content="I design software for people doing complicated jobs. Lately, also for my own small company.">
+<title>Sridhar Gururajan · Product &amp; UX Strategist</title>
+<meta name="description" content="Sridhar Gururajan, product and UX strategist from Dharmapuri, Tamil Nadu. 9.5 years at Airbus, Eli Lilly and L&amp;T; founder of Sriyam. Contract and freelance: product audits, discovery sprints and fractional strategy.">
+<meta property="og:title" content="Sridhar Gururajan · Product &amp; UX Strategist">
+<meta property="og:description" content="I help teams decide what to build, how people will use it, and how to take it to market.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sridharux.in/">
 <meta property="og:image" content="https://sridharux.in/sriyam-app.jpg">
@@ -112,6 +112,10 @@
   a.tile.dark:hover{border-color:#ff9a6a}
   .tile.dark .hand{color:#ffb48f}
   .tile .tag{position:absolute;top:20px;right:22px;font-size:22px;transform:rotate(4deg)}
+  .tile .fit{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink)}
+  .tile .fit b{font-weight:500;color:var(--accent)}
+  .services .tile{min-height:300px}
+  .services .tile p{margin-bottom:16px}
 
   .books{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
   .books .facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px}
@@ -161,6 +165,7 @@
     .num b{font-size:28px}
     .xp li{grid-template-columns:1fr;gap:2px}
     .xp .co{text-align:left}
+    .tile .tag{position:static;display:block;transform:none;margin-bottom:8px;font-size:19px}
     nav{gap:16px}
     header{margin-bottom:40px}
   }
@@ -173,8 +178,9 @@
   <header>
     <a class="name" href="#">Sridhar Gururajan</a>
     <nav aria-label="Main">
-      <a href="#sriyam">Sriyam</a>
+      <a href="#services">How I help</a>
       <a href="#work">Work</a>
+      <a href="#sriyam">Sriyam</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -182,15 +188,15 @@
 
   <div class="hero">
     <p class="hello">Hi, I'm Sridhar.</p>
-    <h1>I design software for people doing
-      <span class="scribble">complicated jobs.<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 13 C 60 6, 120 16, 180 9 S 270 7, 296 12" fill="none" stroke="#b33000" stroke-width="3" stroke-linecap="round"/></svg></span>
-      Lately, also for my own small company.</h1>
-    <p>For nine and a half years that meant engineers at <strong>Airbus</strong>, clinical teams at <strong>Eli Lilly</strong> and product teams at <strong>L&amp;T</strong>. In 2025, a temple visit in Kanchipuram turned into <strong>Sriyam</strong>, which I now design, build and sell from Dharmapuri, Tamil Nadu.</p>
-    <p>I'm looking for a remote design role, and I take on consulting work too.</p>
+    <h1>I help teams decide
+      <span class="scribble">what to build,<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 13 C 60 6, 120 16, 180 9 S 270 7, 296 12" fill="none" stroke="#b33000" stroke-width="3" stroke-linecap="round"/></svg></span>
+      how people will use it, and how to take it to market.</h1>
+    <p>For nine and a half years I've done that inside <strong>Airbus</strong>, <strong>Eli Lilly</strong> and <strong>L&amp;T</strong>, where good decisions showed up as money saved and tools people actually used. Since 2025 I've also run my own company, <strong>Sriyam</strong>, where the product, pricing and launch calls are mine.</p>
+    <p>I take on contract and freelance work: product audits, discovery sprints and fractional strategy roles.</p>
     <div class="ctas">
-      <a class="btn solid" href="cv.pdf" download>Download my CV</a>
-      <a class="btn ghost" href="mailto:srisridharguru@gmail.com">Email</a>
+      <a class="btn solid" href="mailto:srisridharguru@gmail.com?subject=Project%20enquiry">Tell me about your product</a>
       <a class="btn ghost" href="https://wa.me/918870327765" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn ghost" href="cv.pdf" download>Download my CV</a>
     </div>
   </div>
 
@@ -204,10 +210,85 @@
     </div>
   </section>
 
+  <section id="services" class="services" aria-labelledby="services-h">
+    <div class="label">How I help</div>
+    <h2 id="services-h">Three ways to work together.</h2>
+    <p class="lead">Each one ends in decisions you can act on: what to build, what to drop, and how you'll know it worked. I still design when it helps, but the screens are never the point.</p>
+
+    <div class="grid">
+      <div class="tile third">
+        <div class="kicker">2 weeks · fixed scope</div>
+        <h3>Product &amp; UX audit</h3>
+        <p>I go through your product, your numbers and a handful of real users to find where people drop off and what it costs you. You get a ranked fix list, not a 60-page report.</p>
+        <div class="fit"><b>Good for</b> a live product where users leave or don't convert.</div>
+      </div>
+
+      <div class="tile third">
+        <div class="kicker">3–4 weeks · fixed scope</div>
+        <h3>Discovery &amp; feature sprint</h3>
+        <p>Interviews, jobs-to-be-done and quick tests to decide which features earn a place in the next release, and what the smallest useful version looks like.</p>
+        <div class="fit"><b>Good for</b> a new product, or a roadmap with too many ideas on it.</div>
+      </div>
+
+      <div class="tile third">
+        <div class="kicker">Monthly · a few days a month</div>
+        <h3>Fractional strategist</h3>
+        <p>I work alongside founders and product leads on roadmap, launches, pricing and go-to-market, before you're ready for a full-time head of product or design.</p>
+        <div class="fit"><b>Good for</b> early-stage teams without a senior product voice.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="label">Enterprise work</div>
+    <h2 id="work-h">Decisions that saved money and got used.</h2>
+    <p class="lead">Most of my career has been inside large companies, on software engineers and operations teams can't avoid. The work that mattered was rarely a screen. It was getting six departments onto one record, or finding the smallest fix people would actually adopt.</p>
+
+    <div class="grid">
+      <a class="tile" href="https://www.figma.com/deck/1Ka6B10cOYrrqVpSLOYZiZ/Chemical-Regulatory?node-id=1-42" target="_blank" rel="noopener">
+        <img class="bgimg" src="frame8.jpg" alt="">
+        <div class="wash"></div>
+        <div class="kicker">Airbus · 1.5 years</div>
+        <h3>Chemical Regulatory Database</h3>
+        <p>Six departments kept separate records of the same chemicals, often under different names. I ran the research, mapped who needed what, and helped bring it all into one shared source. Chemical procurement cost fell 9%.</p>
+        <div class="more">Read the case study <span>↗</span></div>
+      </a>
+
+      <a class="tile" href="https://www.figma.com/deck/ZM7DmA233FhYcwuvyGR08C" target="_blank" rel="noopener">
+        <img class="bgimg" src="component1.jpg" alt="">
+        <div class="wash"></div>
+        <div class="kicker">Airbus · Lean UX</div>
+        <h3>Tagging files people actually tag</h3>
+        <p>People weren't tagging files for data sensitivity because the Google Drive tool was hard to use. I watched them work, fixed the smallest problems first and tested again. 13 issues fixed; the redesign scored 4.5/5.</p>
+        <div class="more">Read the case study <span>↗</span></div>
+      </a>
+
+      <div class="tile third">
+        <div class="kicker">Airbus · design system</div>
+        <h3>Component library</h3>
+        <p>16 reusable patterns used by 500+ engineers across 4 teams. Handoffs to development got shorter, and usability tests averaged 4.7/5.</p>
+      </div>
+
+      <div class="tile third">
+        <div class="kicker">Airbus · workshop</div>
+        <h3>Design Thinking with 48 leaders</h3>
+        <p>A workshop for product managers, programme heads and product owners on improving the travel experience.</p>
+      </div>
+
+      <div class="tile third">
+        <img class="bgimg" src="frame14.jpg" alt="">
+        <div class="wash"></div>
+        <div class="kicker">Usability study · in progress</div>
+        <h3>IoT for sustainability</h3>
+        <p>Alarms and monitoring for procured spare parts.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="sriyam" aria-labelledby="sriyam-h">
     <div class="label">My own company</div>
-    <h2 id="sriyam-h">Sriyam started with one temple visit.</h2>
-    <p class="lead">The big devotional apps cover pujas and timings. I wanted the part they skip: why a particular temple might matter to you right now. That idea now runs across an app, a website, a store and a set of books, all under TempleInt Labs.</p>
+    <h2 id="sriyam-h">Where I test my own advice.</h2>
+    <p class="lead">Sriyam started with one temple visit in 2025. The big devotional apps cover pujas and timings, so I positioned it on the part they skip: why a particular temple might matter to you right now. Positioning, pricing and launch are my calls, made with my own money, across an app, a website, a store and books under TempleInt Labs.</p>
 
     <div class="grid">
       <a class="tile dark tall" href="https://www.figma.com/slides/K6ktip0B5M2HcDS1NJnqJG" target="_blank" rel="noopener">
@@ -258,52 +339,6 @@
     </div>
   </section>
 
-  <section id="work" aria-labelledby="work-h">
-    <div class="label">Before Sriyam</div>
-    <h2 id="work-h">Tools people have to use to do their jobs.</h2>
-    <p class="lead">Most of my career has been inside large companies, on software that engineers and operations teams can't avoid. Good design there shows up as money saved and tools people actually use.</p>
-
-    <div class="grid">
-      <a class="tile" href="https://www.figma.com/deck/1Ka6B10cOYrrqVpSLOYZiZ/Chemical-Regulatory?node-id=1-42" target="_blank" rel="noopener">
-        <img class="bgimg" src="frame8.jpg" alt="">
-        <div class="wash"></div>
-        <div class="kicker">Airbus · 1.5 years</div>
-        <h3>Chemical Regulatory Database</h3>
-        <p>Six departments kept separate records of the same chemicals, often under different names. I ran the research, mapped who needed what, and helped bring it all into one shared source. Chemical procurement cost fell 9%.</p>
-        <div class="more">Read the case study <span>↗</span></div>
-      </a>
-
-      <a class="tile" href="https://www.figma.com/deck/ZM7DmA233FhYcwuvyGR08C" target="_blank" rel="noopener">
-        <img class="bgimg" src="component1.jpg" alt="">
-        <div class="wash"></div>
-        <div class="kicker">Airbus · Lean UX</div>
-        <h3>Tagging files people actually tag</h3>
-        <p>People weren't tagging files for data sensitivity because the Google Drive tool was hard to use. I watched them work, fixed the smallest problems first and tested again. 13 issues fixed; the redesign scored 4.5/5.</p>
-        <div class="more">Read the case study <span>↗</span></div>
-      </a>
-
-      <div class="tile third">
-        <div class="kicker">Airbus · design system</div>
-        <h3>Component library</h3>
-        <p>16 reusable patterns used by 500+ engineers across 4 teams. Handoffs to development got shorter, and usability tests averaged 4.7/5.</p>
-      </div>
-
-      <div class="tile third">
-        <div class="kicker">Airbus · workshop</div>
-        <h3>Design Thinking with 48 leaders</h3>
-        <p>A workshop for product managers, programme heads and product owners on improving the travel experience.</p>
-      </div>
-
-      <div class="tile third">
-        <img class="bgimg" src="frame14.jpg" alt="">
-        <div class="wash"></div>
-        <div class="kicker">Usability study · in progress</div>
-        <h3>IoT for sustainability</h3>
-        <p>Alarms and monitoring for procured spare parts.</p>
-      </div>
-    </div>
-  </section>
-
   <section aria-labelledby="how-h">
     <div class="label" id="how-h">How I work</div>
     <div class="how">
@@ -320,7 +355,7 @@
   <section id="experience" aria-labelledby="xp-h">
     <div class="label" id="xp-h">Where I've worked</div>
     <ul class="xp">
-      <li><span class="yr">2025 – now</span><span class="rl">Founder</span><span class="co">TempleInt Labs · Sriyam</span></li>
+      <li><span class="yr">2025 – now</span><span class="rl">Founder &amp; product strategist</span><span class="co">TempleInt Labs · Sriyam</span></li>
       <li><span class="yr">2026</span><span class="rl">Technical Lead, UX</span><span class="co">Infovision Labs · contract</span></li>
       <li><span class="yr">2025</span><span class="rl">Senior UX Designer</span><span class="co">Brainridge Consulting · contract</span></li>
       <li><span class="yr">2022 – 2025</span><span class="rl">UI/UX Designer</span><span class="co">Airbus India</span></li>
@@ -333,9 +368,9 @@
   <section id="contact" aria-labelledby="contact-h">
     <div class="contact">
       <h2 id="contact-h">Let's talk.</h2>
-      <p>If you're hiring for a remote design role, or need a few weeks of help on your product, I'd like to hear about it. I work on Indian time, which overlaps well with UK and European hours.</p>
+      <p>If you're deciding what to build next, working out why users don't stick, or planning a launch, I can help, as a fixed-scope audit or sprint, or a few days a month. I work on Indian time, which overlaps well with UK and European hours.</p>
       <div class="ctas">
-        <a class="btn solid" href="mailto:srisridharguru@gmail.com">Email me</a>
+        <a class="btn solid" href="mailto:srisridharguru@gmail.com?subject=Project%20enquiry">Email me</a>
         <a class="btn ghost" href="https://wa.me/918870327765" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/sridhar-gururajan/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
